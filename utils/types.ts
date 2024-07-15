@@ -24,7 +24,7 @@ export enum JobMode {
   Internship = 'internship',
 }
 
-const createAndEditJobSchema = z.object({
+export const createAndEditJobSchema = z.object({
     position: z.string().min(2, {
         message: "Position must be at least 2 characters"}),
     company: z.string().min(2, {
@@ -35,4 +35,4 @@ const createAndEditJobSchema = z.object({
     mode: z.nativeEnum(JobMode) 
 })
 
-export type createAndEditJobType = z.infer<typeof createAndEditJobSchema>
+export type CreateAndEditJobType = z.infer<typeof createAndEditJobSchema>
