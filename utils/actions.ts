@@ -126,7 +126,7 @@ Promise<JobType | null> {
     const userId = authenticateAndRedirect();
 
     try {
-      const job = await prisma.job.findUnique({
+        job = await prisma.job.findUnique({
         where: {
           id: id,
           clerkId: userId
@@ -142,4 +142,28 @@ Promise<JobType | null> {
     }
 
     return job
+}
+
+export async function updateJobAction (
+  id: string, 
+  values: CreateAndEditJobType) :
+Promise<JobType | null> {
+  const userId = authenticateAndRedirect();
+  try {
+    const job = await prisma.job.update({
+      where: { 
+        id: id,
+        clerkId: userId
+      },
+      data: {
+        ...values
+      }
+    })
+
+    return job;
+
+  } catch (e) {
+    console.log(e);
+    return null;
+  }
 }
