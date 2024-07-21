@@ -9,7 +9,6 @@ import dayjs from 'dayjs';
 
 function authenticateAndRedirect(): string {
     const { userId } = auth();
-    console.log(userId);
     if (!userId) {
       redirect('/');
     }
@@ -197,7 +196,7 @@ export async function getStatsAction () : Promise<{
           declined: 0,
           ...statsObject
         }
-    
+        console.log(defaultState)
         return defaultState
 
     } catch (e) {
@@ -222,6 +221,7 @@ export async function getChartsDataAction() : Promise<
           createdAt:'asc'
         }
       })
+
 
       let applicationsPerMonth = jobs.reduce((acc, job) => {
       const date = dayjs(job.createdAt).format('MMM YY');
