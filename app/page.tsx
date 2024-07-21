@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Camera } from "lucide-react";
 import Image from "next/image";
-import Logo from "@/assets/logo.svg";
+import Logo from "@/assets/jj.svg";
 import LandingImg from "@/assets/main.svg";
 import Link from "next/link";
 
