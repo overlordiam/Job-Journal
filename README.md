@@ -1,7 +1,7 @@
 # Job-Journal
 
 ## Overview
-Job Journal is a comprehensive tool designed to help job seekers efficiently manage and monitor their job applications. This user-friendly platform ensures that you stay organized throughout your job search, keeping all essential information in one place. It is a full-stack application that included authentication, storage and also a statistics page. The inspiration for this project comes from my journey of applying to many companies and losing track of them as time passes.
+Job Journal is a comprehensive tool designed to help job seekers efficiently manage and monitor their job applications. This user-friendly platform ensures that you stay organized throughout your job search, keeping all essential information in one place. It is a full-stack application that includes authentication, storage and also a statistics page. The inspiration for this project comes from my journey of applying to many companies and losing track of them as time passes.
 
 ## A preview:
 <div>
